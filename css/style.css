@@ -6,15 +6,16 @@ header{
 
   background-color: #000;
   color: #fff;
-  text-align: right;
-  text-decoration: none;
+  text-align: center;
+  max-width: 940px;
+  margin: 0 auto;
 }
 
 header div {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1em;
+  padding: 0 1em 0 1em;
 }
 
 nav ul {
@@ -28,16 +29,15 @@ nav ul li a:visited {
   display: inline-block;
   color: white;
   text-decoration: none;
-  padding: 1em;
+  padding: 0 1em 0 1em;
 
 }
 
 
 .wrapper {
   max-width: 940px;
-  margin: auto;
-  
- 
+  margin: 0 auto;
+
 }
 
 #hero {
@@ -60,25 +60,23 @@ h1 {
   background-color: rgba(0, 0 , 0, 50%);
   padding: 1em;
   color: #fff;
-  text-shadow: #fff;
+  text-shadow: -4px 2px 1px black; 
 
 }
 
 #about-me {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  align-items: start;
+  align-self: flex-start;
   padding: 4em;
-
 }
 
 
 
 
 #services {
-  background-color: #fafafa;
   padding: 2em;
-  
+  background-color: #fafafa;
 }
 
 #services h2 {
@@ -91,7 +89,7 @@ h1 {
   margin: 0;
 }
 
-#services div:nth-child(3) {
+#services div:nth-child(2) {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2em;
@@ -99,54 +97,55 @@ h1 {
 }
 
 
-#service article {
+#services article {
   
   display: flex;
   flex-direction: column;
-  background-color: #ffffff;
+  background-color: white;
+  padding: 2em;
 }
 
 .btn {
   background-color: black;
   border-color: black;
+  border: 3px solid black;
   color: #fff;
-  padding: 1em;
-  border: 1em;
+  padding: 0.5em;
   text-align: center;
-  margin-top: auto;
   text-decoration: none;
-
+  margin-top: auto;
+  width: 50%;
 }
 
 
 
 
-.btn:hover
-.btn:focus(
+.btn:hover,
+.btn:focus { 
   background: white;
   color: black;
-)
+}
 
 
 #work {
- text-align: center;
- padding: 2em;
-  
+  margin: 0 auto;
+  max-width: 940px;
+  padding: 2em;
 }
 
 #work .grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  justify-content: 0;
-  justify-content: center;
   gap: 0;
-  
-
 
   grid-template-areas: 
   "div1 div1 div1 div2 div2 div2"
   "div3 div3 div4 div4 div5 div5"
+}
+
+#work  {
+  text-align: center;
 }
 
 #work img:nth-child(1) {
@@ -179,3 +178,9 @@ h1 {
   height: 100%;
 }
 
+footer {
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 1em;
+}
